@@ -115,7 +115,6 @@ const start = () => {
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
-      console.log(startCountdown);
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
@@ -134,7 +133,8 @@ displayHistory();
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
+  const timeSpentRounded = Math.round(timeSpent);
 
 
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+  document.getElementById("show-time").innerHTML = `${startTime ? timeSpentRounded : 0} seconds`;
 }, 1000);
