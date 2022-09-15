@@ -70,6 +70,7 @@ const gameOver = () => {
   const finishTime = new Date().getTime();
   const timeTakenDecimal = (finishTime - startTime) / 1000;
   const timeTaken = Math.ceil(timeTakenDecimal);
+  const speed = (userText.length/timeTaken).toFixed(2);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -83,7 +84,7 @@ const gameOver = () => {
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-    <p>Your typing speed is ${userText.length/timeTaken} characters per second</p>
+    <p>Your typing speed is ${speed} characters per second</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
