@@ -26,11 +26,13 @@
       </p>
       <h3 class="blog-question">Question 2:  What are the differences between global scope and local scope?</h3>
       <p class="blog-answer">
-        <b>Answer:</b>
+        <b>Answer:</b> A variable's scope is the range of the script where it is visible. Variables have either global or local scope. A global variable exists only once in a script, and is visible in every function. Modifications to it in one function are permanent and visible to all functions. Unless declared otherwise, all variables in a script are global. Global variables are useful for values that are relatively constant, or that many functions in the script must access, such as a session id. <br>
+        A local variable, however, has a limited scope: it exists only within the block that it is declared in. Once that block ends, the variable is destroyed and its values lost. A local variable of the same name declared elsewhere is a different variable. A local variable can even exist multiple times simultaneously, if its block is entered again before it's exited - i.e. a recursive function call. Each call of the function will have a distinct local variable.
       </p>
       <h3 class="blog-question">Question 3: What is event loop in JavaScript?</h3>
       <p class="blog-answer">
-        <b>Answer:</b>
+        <b>Answer:</b> An event loop is a mechanism that allows JavaScript to execute a callback function after a given event has occurred. For example, when a user clicks a button on a web page, an event is generated and the event loop will execute the callback function associated with that event. <br>
+        Event loops are important because they allow JavaScript to handle events asynchronously. This means that JavaScript can continue to execute code while waiting for an event to occur. This is important because it allows JavaScript to avoid blocking the main thread of execution, which would prevent the web page from responding to user input.
       </p>
       <h3 class="blog-question">Question 4: What returns undefined value is JavaScript?</h3>
       <p class="blog-answer">
